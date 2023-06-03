@@ -18,7 +18,7 @@ The model architecture consists of several convolutional layers, batch normaliza
 
 | Layer         | Input Size | Output Size | Kernel Size | Parameters |
 |---------------|------------|-------------|-------------|------------|
-| Conv1         | 1x28x28    | 8x28x28     | 3x3         | 224        |
+| Conv1         | 1x28x28    | 8x28x28     | 3x3         | 80         |
 | Conv2         | 8x28x28    | 16x28x28    | 3x3         | 1168       |
 | Pool1         | 16x28x28   | 16x14x14    | 2x2         | 0          |
 | Conv3         | 16x14x14   | 16x14x14    | 3x3         | 2320       |
@@ -28,6 +28,9 @@ The model architecture consists of several convolutional layers, batch normaliza
 | Conv6         | 16x5x5     | 10x3x3      | 3x3         | 1450       |
 | GAP           | 10x3x3     | 1x1x10      | -           | 0          |
 | **Total**     |            |             |             | **9720**   |
+
+***Please note that the calculation includes the parameters in the convolutional layers, but not in the batch normalization and dropout layers. 
+The `summary` function takes all the layers into account and provides an accurate count of the total number of parameters in the network.
 
 The table above shows the calculation of parameters at each layer in the network. It includes the input size, output size, kernel size, and the total number of parameters for each layer.
 
@@ -67,9 +70,6 @@ The model contains a total of 9,720 parameters, all of which are trainable.
 
 - **Layer Name: GAP (Global Average Pooling)**
   - Calculation: 0 (No parameters in Global Average Pooling)
-
-Please note that the calculation includes the parameters in the convolutional layers, but not in the batch normalization and dropout layers. 
-The `summary` function takes all the layers into account and provides an accurate count of the total number of parameters in the network.
 
 ## Training
 
