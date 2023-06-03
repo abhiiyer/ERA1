@@ -31,9 +31,10 @@ The table below shows the calculation of parameters at each layer in the network
 | GAP           | 10x3x3     | 1x1x10      | -           | 0          |
 | **Total**     |            |             |             | **9720**   |
 
-Total params: 9,720
-Trainable params: 9,720
+Total params: 9,720  
+Trainable params: 9,720  
 Non-trainable params: 0
+
 
 The model contains a total of 9,720 parameters, all of which are trainable.
 
