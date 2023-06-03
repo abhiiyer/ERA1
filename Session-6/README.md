@@ -36,8 +36,6 @@ Trainable params: 9,720
 Non-trainable params: 0
 
 
-The model contains a total of 9,720 parameters, all of which are trainable.
-
 ***Please note that the calculation includes the parameters in the convolutional layers, but not in the batch normalization and dropout layers. 
 The `summary` function takes all the layers into account and provides an accurate count of the total number of parameters in the network.
 
