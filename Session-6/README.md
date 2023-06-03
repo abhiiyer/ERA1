@@ -37,13 +37,9 @@ Non-trainable params: 0
 
 The model contains a total of 9,720 parameters, all of which are trainable.
 
-The model contains a total of 9,720 parameters, all of which are trainable.
-
 ## Calculation of Parameters
 
 ### Calculation: (input_channels * output_channels * kernel_height * kernel_width) + output_channels
-
-The model contains a total of 9,720 parameters, all of which are trainable.
 
 - Layer Name: Conv1 Parameters: (1 * 8 * 3 * 3) + 8 = 224
 - Layer Name: Conv2 Parameters: (8 * 16 * 3 * 3) + 16 = 1168
