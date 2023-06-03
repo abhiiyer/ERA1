@@ -41,15 +41,33 @@ The model contains a total of 9,720 parameters, all of which are trainable.
 
 ### Calculation: (input_channels * output_channels * kernel_height * kernel_width) + output_channels
 
-- Layer Name: Conv1 Parameters: (1 * 8 * 3 * 3) + 8 = 224
-- Layer Name: Conv2 Parameters: (8 * 16 * 3 * 3) + 16 = 1168
-- Layer Name: Pool1 (MaxPooling) Calculation: 0 (No parameters in MaxPooling)
-- Layer Name: Conv3 Parameters: (16 * 16 * 3 * 3) + 16 = 2320
-- Layer Name: Conv4 Parameters: (16 * 16 * 3 * 3) + 16 = 2320
-- Layer Name: Pool2 (MaxPooling) Calculation: 0 (No parameters in MaxPooling)
-- Layer Name: Conv5 Parameters: (16 * 16 * 3 * 3) + 16 = 2320
-- Layer Name: Conv6 Parameters: (16 * 10 * 3 * 3) + 10 = 1450
-- Layer Name: GAP (Global Average Pooling) Calculation: 0 (No parameters in Global Average Pooling)
+- **Layer Name: Conv1**
+  - Parameters: (1 * 8 * 3 * 3) + 8 = 224
+
+- **Layer Name: Conv2**
+  - Parameters: (8 * 16 * 3 * 3) + 16 = 1168
+
+- **Layer Name: Pool1 (MaxPooling)**
+  - Calculation: 0 (No parameters in MaxPooling)
+
+- **Layer Name: Conv3**
+  - Parameters: (16 * 16 * 3 * 3) + 16 = 2320
+
+- **Layer Name: Conv4**
+  - Parameters: (16 * 16 * 3 * 3) + 16 = 2320
+
+- **Layer Name: Pool2 (MaxPooling)**
+  - Calculation: 0 (No parameters in MaxPooling)
+
+- **Layer Name: Conv5**
+  - Parameters: (16 * 16 * 3 * 3) + 16 = 2320
+
+- **Layer Name: Conv6**
+  - Parameters: (16 * 10 * 3 * 3) + 10 = 1450
+
+- **Layer Name: GAP (Global Average Pooling)**
+  - Calculation: 0 (No parameters in Global Average Pooling)
+
 
 ## Training
 
