@@ -16,6 +16,8 @@ The model architecture consists of several convolutional layers, batch normaliza
 
 ## Calculation of Parameters
 
+The table below shows the calculation of parameters at each layer in the network. It includes the input size, output size, kernel size, and the total number of parameters for each layer.
+
 | Layer         | Input Size | Output Size | Kernel Size | Parameters |
 |---------------|------------|-------------|-------------|------------|
 | Conv1         | 1x28x28    | 8x28x28     | 3x3         | 80         |
@@ -29,16 +31,15 @@ The model architecture consists of several convolutional layers, batch normaliza
 | GAP           | 10x3x3     | 1x1x10      | -           | 0          |
 | **Total**     |            |             |             | **9720**   |
 
-***Please note that the calculation includes the parameters in the convolutional layers, but not in the batch normalization and dropout layers. 
-The `summary` function takes all the layers into account and provides an accurate count of the total number of parameters in the network.
-
-The table above shows the calculation of parameters at each layer in the network. It includes the input size, output size, kernel size, and the total number of parameters for each layer.
-
 Total params: 9,720
 Trainable params: 9,720
 Non-trainable params: 0
 
 The model contains a total of 9,720 parameters, all of which are trainable.
+
+***Please note that the calculation includes the parameters in the convolutional layers, but not in the batch normalization and dropout layers. 
+The `summary` function takes all the layers into account and provides an accurate count of the total number of parameters in the network.
+
 
 ## Calculation of Parameters
 
