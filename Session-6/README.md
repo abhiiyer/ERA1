@@ -37,6 +37,22 @@ Non-trainable params: 0
 
 The model contains a total of 9,720 parameters, all of which are trainable.
 
+The model contains a total of 9,720 parameters, all of which are trainable.
+
+## Calculation of Parameters
+
+Calculation: (input_channels * output_channels * kernel_height * kernel_width) + output_channels
+
+Layer Name: Conv1 Parameters: (1 * 8 * 3 * 3) + 8 = 224
+Layer Name: Conv2 Parameters: (8 * 16 * 3 * 3) + 16 = 1168
+Layer Name: Pool1 (MaxPooling) Calculation: 0 (No parameters in MaxPooling)
+Layer Name: Conv3 Parameters: (16 * 16 * 3 * 3) + 16 = 2320
+Layer Name: Conv4 Parameters: (16 * 16 * 3 * 3) + 16 = 2320
+Layer Name: Pool2 (MaxPooling) Calculation: 0 (No parameters in MaxPooling)
+Layer Name: Conv5 Parameters: (16 * 16 * 3 * 3) + 16 = 2320
+Layer Name: Conv6 Parameters: (16 * 10 * 3 * 3) + 10 = 1450
+Layer Name: GAP (Global Average Pooling) Calculation: 0 (No parameters in Global Average Pooling)
+
 ## Training
 
 The training script will train the model on the MNIST dataset using the Adam optimizer and Cross-Entropy loss. It will print the training and validation accuracy for each epoch. The training will stop automatically once the validation accuracy reaches 99.41% or higher. At the end of the training, a graph showing the accuracy vs loss for both the training and test sets will be displayed.
