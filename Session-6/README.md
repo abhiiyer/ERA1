@@ -42,7 +42,7 @@ The model contains a total of 9,720 parameters, all of which are trainable.
 ### Calculation: (input_channels * output_channels * kernel_height * kernel_width) + output_channels
 
 - **Layer Name: Conv1**
-  - Parameters: (1 * 8 * 3 * 3) + 8 = 224
+  - Parameters: (1 * 8 * 3 * 3) + 8 = 80
 
 - **Layer Name: Conv2**
   - Parameters: (8 * 16 * 3 * 3) + 16 = 1168
@@ -68,6 +68,8 @@ The model contains a total of 9,720 parameters, all of which are trainable.
 - **Layer Name: GAP (Global Average Pooling)**
   - Calculation: 0 (No parameters in Global Average Pooling)
 
+Please note that the calculation includes the parameters in the convolutional layers, but not in the batch normalization and dropout layers. 
+The `summary` function takes all the layers into account and provides an accurate count of the total number of parameters in the network.
 
 ## Training
 
