@@ -75,11 +75,11 @@ Total Parameters: 13,808
 
 
 ## Important Code Parts
-The `train_transforms` and `test_transforms` define the data transformations to be applied during the training and test phases, respectively.
-The `Net` class defines the model architecture and the forward pass method.
-The `train` function performs the training loop, including calculating the loss, backpropagation, and updating the model parameters.
-The `test` function evaluates the model on the test dataset and calculates the test loss and accuracy.
-The `device` variable is used to determine whether to use CUDA (GPU) or CPU for computation, based on availability.
-The `summary` function from the `torchsummary` library is used to print the model summary, including the input/output shapes and the number of parameters.
-The optimizer is initialized with stochastic gradient descent (SGD) as the optimization algorithm with a learning rate and momentum.
-The training and test losses and accuracies are recorded during the training process for plotting the graphs.
+1. The `train_transforms` and `test_transforms` define the data transformations to be applied during the training and test phases, respectively.
+2. The `Net` class defines the model architecture and the forward pass method.
+3. The `train` function performs the training loop, including calculating the loss, backpropagation, and updating the model parameters.
+4. The `test` function evaluates the model on the test dataset and calculates the test loss and accuracy.
+5. The `device` variable is used to determine whether to use CUDA (GPU) or CPU for computation, based on availability.
+6. The `summary` function from the `torchsummary` library is used to print the model summary, including the input/output shapes and the number of parameters.
+7. The optimizer is initialized with stochastic gradient descent (SGD) as the optimization algorithm with a learning rate and momentum.
+8. The training and test losses and accuracies are recorded during the training process for plotting the graphs.
