@@ -1,4 +1,4 @@
-# Deep Learning Project
+
 
 ## Introduction
 This project implements a deep learning model for image classification using the MNIST dataset. The model architecture consists of convolutional and pooling layers followed by fully connected layers. The code also demonstrates the training and evaluation processes, as well as the plotting of training and test metrics.
@@ -7,7 +7,6 @@ This project implements a deep learning model for image classification using the
 The model architecture is defined in the `Net` class. It consists of several convolutional blocks, each followed by activation, batch normalization, and dropout layers. The final output is passed through a softmax layer for classification.
 
 ### Model Summary
-```plaintext
 ----------------------------------------------------------------
         Layer (type)               Output Shape         Param #
 ================================================================
@@ -45,7 +44,6 @@ Trainable params: 13,808
 Non-trainable params: 0
 ----------------------------------------------------------------
 
-
 ## Calculation of Parameters
 
 Here is the calculation of parameters for each layer:
@@ -77,11 +75,11 @@ Parameters = (input_channels * output_channels * kernel_size * kernel_size) + ou
 Total Parameters: 13,808
 
 ## Important Code Parts
-The train_transforms and test_transforms define the data transformations to be applied during the training and test phases, respectively.
-The Net class defines the model architecture and the forward pass method.
-The train function performs the training loop, including calculating the loss, backpropagation, and updating the model parameters.
-The test function evaluates the model on the test dataset and calculates the test loss and accuracy.
-The device variable is used to determine whether to use CUDA (GPU) or CPU for computation, based on availability.
-The summary function from torchsummary library is used to print the model summary, including the input/output shapes and the number of parameters.
+The `train_transforms` and `test_transforms` define the data transformations to be applied during the training and test phases, respectively.
+The `Net` class defines the model architecture and the forward pass method.
+The `train` function performs the training loop, including calculating the loss, backpropagation, and updating the model parameters.
+The `test` function evaluates the model on the test dataset and calculates the test loss and accuracy.
+The `device` variable is used to determine whether to use CUDA (GPU) or CPU for computation, based on availability.
+The `summary` function from the `torchsummary` library is used to print the model summary, including the input/output shapes and the number of parameters.
 The optimizer is initialized with stochastic gradient descent (SGD) as the optimization algorithm with a learning rate and momentum.
 The training and test losses and accuracies are recorded during the training process for plotting the graphs.
