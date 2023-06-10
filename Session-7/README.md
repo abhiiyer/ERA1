@@ -13,7 +13,7 @@
 6. Explain your 3 steps using these target, results, and analysis with links to your GitHub files (Colab files moved to GitHub).   
 7. Keep Receptive field calculations handy for each of your models.   
 8. If your GitHub folder structure or file_names are messy, -100.   
-9. When ready, attempt SESSION 4 -Assignment Solution  
+9. When ready, attempt SESSION 7 - Assignment Solution  
 
 
 ## Solution, Step 1 [Notebook](https://github.com/abhiiyer/ERA1/blob/main/Session-7/Model-1/ERA_Session7_Model-1.ipynb)
@@ -23,42 +23,56 @@
 - Defining simple model with Convolution block, GAP, dropout and batch normalization.
 
 ### Results
-- Parameters: 6,038
-- Best Train Accuracy 98.84%  
-- Best Test Accuracy 99.25%  
+- Parameters: 13,808
+- Best Train Accuracy 99.35%
+- Best Test Accuracy 99.34%  
 
 ### Analysis
-- Model with 6K parameters is able to reach till 99.25% accuracy in 15 epochs.
-- Model is not overfitting as training and test accuracies are closeby.
+- Model with 13.8K parameters is able to reach till 99.34% accuracy in 20 epochs.
+- Model is not overfitting as training and test accuracies are closeby. (Main purpose was to try to bridge this gap as much possible)
 
 ## Solution, Step 2 [Notebook](https://github.com/abhiiyer/ERA1/blob/main/Session-7/Model-2/ERA_Session7_Model2.ipynb)
 
 ### Target   
-- Add image augmentation w random rotation and random affine to improve the model performance.
+- Add another layer after the GAP, possibly to capture more features and to improve the model performance.
 
 ### Results
-- Parameters: 6,038
-- Best Train Accuracy 98.33%  
-- Best Test Accuracy 99.19%  
+- Parameters: 9,962
+- Best Train Accuracy 98.85%%  
+- Best Test Accuracy 99.31%  
 
 ### Analysis
-- Model with 6K parameters is able to reach till 99.19% accuracy in 15 epochs.
-- Image augmentation doesn't show much improvement. It may be because of presense of dropout which effectively does similar function.
+- Model with ~9.6K parameters is able to reach till 99.19% accuracy in 15 epochs.
+- Adding layers after GAP doesn't show much improvement. (Accuracy almost same)
+
 
 ## Solution, Step 3 [Notebook](https://github.com/abhiiyer/ERA1/blob/main/Session-7/Model-3/ERA_Session7_Model3.ipynb)
 
 ### Target   
-- Study effect of including StepLR rate scheduler.
-- Increase model capacity by increasing number of convolution layer.
-- Optimize the learning rate and drop out value
+- Fine Tune the Transforms, set rotation to -10deg to 10deg
+- Usage of OneCycleLR Scheduler 
+
+### Results
+- Parameters: 9,962
+- Best Train Accuracy 96.39%  
+- Best Test Accuracy 98.80%  
+
+### Analysis
+- Model with 9.9K parameters & test 98.80% accuracy in 15 epochs.
+- Model does not meets all the requirement of accuracy(<99.4%) and model size (>8K)
+
+
+## Solution, Step 4 [Notebook](https://github.com/abhiiyer/ERA1/blob/main/Session-7/Model-3/ERA_Session7_Model3.ipynb)
+
+### Target   
+- Fine Tune the Transforms, set rotation to -10deg to 10deg
+- Usage of OneCycleLR Scheduler 
 
 ### Results
 - Parameters: 7,416
-- Best Train Accuracy 99.03%  
-- Best Test Accuracy 99.40%  
+- Best Train Accuracy 99.06%  
+- Best Test Accuracy 99.43%  
 
 ### Analysis
-- Model with 7.4K parameters is cross 99.40% accuracy in 15 epochs.
-- Model meets all the requirement of model size, accuracy and epoch.
-- Increasing model capacity and LR rate scheduler helps meet the accuracy in 15 epochs
-
+- Model with 7.4K parameters & test 99.43% accuracy in 15 epochs.
+- Model meets all the requirement of model size, and epoch.
