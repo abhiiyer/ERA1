@@ -37,7 +37,7 @@ The model architecture is defined in the `Net` class. It consists of several con
 |      Dropout-26    |     [-1, 16, 6, 6] |     0    |
 |      AvgPool2d-27  |     [-1, 16, 1, 1] |     0    |
 |      Conv2d-28     |     [-1, 10, 1, 1] |    160   |
-================================================================
+
 Total params: 13,808
 Trainable params: 13,808
 Non-trainable params: 0
