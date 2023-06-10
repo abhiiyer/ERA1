@@ -72,8 +72,6 @@ SGD is an optimization algorithm commonly used for training deep learning models
 
 StepLR is a learning rate scheduler that adjusts the learning rate during training. It reduces the learning rate by a specified factor after a certain number of epochs. In this implementation, the learning rate is reduced by a factor of 0.1 every 6 epochs.
 
-Feel free to modify the hyperparameters, such as the learning rate, batch size, or number of epochs, to experiment with different configurations.
-
 
 ## Dependencies
 
@@ -92,5 +90,3 @@ To run the code, follow these steps:
 3. The code will download the MNIST dataset automatically.
 4. The training progress will be displayed in the console, showing the loss, batch index, and accuracy.
 5. After the training is completed, the test accuracy will be displayed.
-
-Feel free to modify the hyperparameters, such as the learning rate, batch size, or number of epochs, to experiment with different configurations.
