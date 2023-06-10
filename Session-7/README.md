@@ -50,7 +50,7 @@
 
 ### Target   
 - Fine Tune the Transforms, set rotation to -10deg to 10deg
-- Usage of OneCycleLR Scheduler 
+- Usage of OneCycleLR Scheduler
 
 ### Results
 - Parameters: 9,962
@@ -75,4 +75,4 @@
 
 ### Analysis
 - Model with 7.4K parameters & test 99.45% accuracy in 15 epochs.
-- Model meets all the requirement of model size, and epoch.
+- Model meets all the requirement of model size, test accuracy and epoch.
