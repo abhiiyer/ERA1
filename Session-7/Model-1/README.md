@@ -1,4 +1,4 @@
-
+# Deep Learning Project
 
 ## Introduction
 This project implements a deep learning model for image classification using the MNIST dataset. The model architecture consists of convolutional and pooling layers followed by fully connected layers. The code also demonstrates the training and evaluation processes, as well as the plotting of training and test metrics.
@@ -73,6 +73,7 @@ Conv2d-28: Input shape = (16, 1, 1), Output shape = (10, 1, 1)
 
 Parameters = (input_channels * output_channels * kernel_size * kernel_size) + output_channels = (16 * 10 * 1 * 1) + 10 = 160
 Total Parameters: 13,808
+
 
 ## Important Code Parts
 The `train_transforms` and `test_transforms` define the data transformations to be applied during the training and test phases, respectively.
