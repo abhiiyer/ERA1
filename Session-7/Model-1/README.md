@@ -7,37 +7,36 @@ This project implements a deep learning model for image classification using the
 The model architecture is defined in the `Net` class. It consists of several convolutional blocks, each followed by activation, batch normalization, and dropout layers. The final output is passed through a softmax layer for classification.
 
 ### Model Summary
-----------------------------------------------------------------
-        Layer (type)               Output Shape         Param #
-================================================================
-            Conv2d-1           [-1, 16, 26, 26]             144
-              ReLU-2           [-1, 16, 26, 26]               0
-       BatchNorm2d-3           [-1, 16, 26, 26]              32
-           Dropout-4           [-1, 16, 26, 26]               0
-            Conv2d-5           [-1, 32, 24, 24]           4,608
-              ReLU-6           [-1, 32, 24, 24]               0
-       BatchNorm2d-7           [-1, 32, 24, 24]              64
-           Dropout-8           [-1, 32, 24, 24]               0
-            Conv2d-9           [-1, 10, 24, 24]             320
-        MaxPool2d-10           [-1, 10, 12, 12]               0
-           Conv2d-11           [-1, 16, 10, 10]           1,440
-             ReLU-12           [-1, 16, 10, 10]               0
-      BatchNorm2d-13           [-1, 16, 10, 10]              32
-          Dropout-14           [-1, 16, 10, 10]               0
-           Conv2d-15             [-1, 16, 8, 8]           2,304
-             ReLU-16             [-1, 16, 8, 8]               0
-      BatchNorm2d-17             [-1, 16, 8, 8]              32
-          Dropout-18             [-1, 16, 8, 8]               0
-           Conv2d-19             [-1, 16, 6, 6]           2,304
-             ReLU-20             [-1, 16, 6, 6]               0
-      BatchNorm2d-21             [-1, 16, 6, 6]              32
-          Dropout-22             [-1, 16, 6, 6]               0
-           Conv2d-23             [-1, 16, 6, 6]           2,304
-             ReLU-24             [-1, 16, 6, 6]               0
-      BatchNorm2d-25             [-1, 16, 6, 6]              32
-          Dropout-26             [-1, 16, 6, 6]               0
-        AvgPool2d-27             [-1, 16, 1, 1]               0
-           Conv2d-28             [-1, 10, 1, 1]             160
+|     Layer (type)    |    Output Shape    |  Param # |
+|---------------------|--------------------|----------|
+|       Conv2d-1      |   [-1, 16, 26, 26] |    144   |
+|         ReLU-2      |   [-1, 16, 26, 26] |     0    |
+|    BatchNorm2d-3    |   [-1, 16, 26, 26] |    32    |
+|       Dropout-4     |   [-1, 16, 26, 26] |     0    |
+|       Conv2d-5      |   [-1, 32, 24, 24] |   4,608  |
+|         ReLU-6      |   [-1, 32, 24, 24] |     0    |
+|    BatchNorm2d-7    |   [-1, 32, 24, 24] |    64    |
+|       Dropout-8     |   [-1, 32, 24, 24] |     0    |
+|       Conv2d-9      |   [-1, 10, 24, 24] |    320   |
+|     MaxPool2d-10    |   [-1, 10, 12, 12] |     0    |
+|      Conv2d-11     |   [-1, 16, 10, 10] |   1,440  |
+|        ReLU-12     |   [-1, 16, 10, 10] |     0    |
+|    BatchNorm2d-13   |   [-1, 16, 10, 10] |    32    |
+|      Dropout-14    |   [-1, 16, 10, 10] |     0    |
+|      Conv2d-15     |     [-1, 16, 8, 8] |   2,304  |
+|        ReLU-16     |     [-1, 16, 8, 8] |     0    |
+|    BatchNorm2d-17   |     [-1, 16, 8, 8] |    32    |
+|      Dropout-18    |     [-1, 16, 8, 8] |     0    |
+|      Conv2d-19     |     [-1, 16, 6, 6] |   2,304  |
+|        ReLU-20     |     [-1, 16, 6, 6] |     0    |
+|    BatchNorm2d-21   |     [-1, 16, 6, 6] |    32    |
+|      Dropout-22    |     [-1, 16, 6, 6] |     0    |
+|      Conv2d-23     |     [-1, 16, 6, 6] |   2,304  |
+|        ReLU-24     |     [-1, 16, 6, 6] |     0    |
+|    BatchNorm2d-25   |     [-1, 16, 6, 6] |    32    |
+|      Dropout-26    |     [-1, 16, 6, 6] |     0    |
+|      AvgPool2d-27  |     [-1, 16, 1, 1] |     0    |
+|      Conv2d-28     |     [-1, 10, 1, 1] |    160   |
 ================================================================
 Total params: 13,808
 Trainable params: 13,808
