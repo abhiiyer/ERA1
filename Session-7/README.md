@@ -71,8 +71,8 @@
 ### Results
 - Parameters: 7,416
 - Best Train Accuracy 99.06%  
-- Best Test Accuracy 99.43%  
+- Best Test Accuracy 99.45%  
 
 ### Analysis
-- Model with 7.4K parameters & test 99.43% accuracy in 15 epochs.
+- Model with 7.4K parameters & test 99.45% accuracy in 15 epochs.
 - Model meets all the requirement of model size, and epoch.
