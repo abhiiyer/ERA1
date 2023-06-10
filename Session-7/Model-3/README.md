@@ -65,6 +65,27 @@ Dropout is a regularization technique used in neural networks to prevent overfit
 
 Batch normalization is a technique used to improve the training of deep neural networks. It normalizes the output of a previous activation layer by subtracting the batch mean and dividing by the batch standard deviation. This helps in reducing the internal covariate shift and provides regularization effects. Batch normalization is applied after each convolutional layer in this model.
 
+
+## OneCycleLR Scheduler
+
+The OneCycleLR scheduler is a learning rate policy in PyTorch that dynamically adjusts the learning rate during training. It is based on the concept of a one-cycle learning rate schedule, where the learning rate is gradually increased, then decreased over the course of training.
+
+The OneCycleLR scheduler aims to find an optimal learning rate that allows for faster convergence and better generalization. It has been shown to be effective in a variety of deep learning tasks.
+
+In the code, the OneCycleLR scheduler is used with the Stochastic Gradient Descent (SGD) optimizer. It is initialized with a maximum learning rate of 0.01 and adjusts the learning rate based on the number of training steps and epochs. The learning rate starts low, increases linearly for a certain percentage of the training process, and then decreases linearly for the remaining percentage.
+
+By using the OneCycleLR scheduler, the model can explore a larger range of learning rates, which can help in finding better minima and avoiding overfitting.
+
+## Transformations
+Transformations are applied to the input data to preprocess and augment it before feeding it to the model. In the code, two types of transformations are used: train_transforms for the training dataset and test_transforms for the test dataset.
+
+### Training Phase Transformations
+The train_transforms include the following steps:
+
+Random Rotation: The images are randomly rotated by an angle between -10 and 10 degrees. This helps in making the model more robust to variations in the orientation of the digits.
+ToTensor: The images are converted to PyTorch tensors. This is necessary as PyTorch models expect tensors as inputs.
+Normalization: The pixel values of the images are normalized using the mean and standard deviation of the MNIST dataset (mean=0.1307, std=0.3081). Normalization helps in stabilizing the training process and improving the convergence of the model.
+
 ## What's Right/Wrong with the Model Architecture
 
 The model architecture follows a standard CNN design with convolutional layers, activation functions, pooling layers, batch normalization, and dropout. Overall, the architecture seems reasonable and is capable of achieving high accuracy on the MNIST dataset.
