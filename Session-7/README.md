@@ -62,7 +62,7 @@
 - Model does not meets all the requirement of accuracy(<99.4%) and model size (>8K)
 
 
-## Solution, Step 4 [Notebook](https://github.com/abhiiyer/ERA1/blob/main/Session-7/Model-3/ERA_Session7_Model4.ipynb)
+## Solution, Step 4 [Notebook](https://github.com/abhiiyer/ERA1/blob/main/Session-7/Model-4/ERA_Session7_Model4.ipynb)
 
 ### Target   
 - Fine Tune the Transforms, set rotation to -7deg to 7deg
