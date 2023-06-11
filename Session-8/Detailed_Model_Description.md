@@ -83,8 +83,18 @@ The following table presents the number of parameters at each layer, including b
 | Conv2d_8     | (10, 1, 1)   | 160          |
 | Dropout_7    | (10, 1, 1)   | 0            |
 
-## Important Code Parts
+## How Does This Model Architecture Help?
 
-- `normalizationFx` function: This function returns the normalization layer based on the selected method ('BN', 'GN', or 'LN'). The number of groups for group normalization is determined based on the method chosen.
-- `forward` method: This method defines the forward pass of the network, where the input is passed through the defined layers in the specified order.
+The chosen model architecture helps in achieving good performance on the task at hand (not specified in the provided code) due to the following reasons:
 
+1. **Convolutional Layers:** The convolutional layers learn spatial hierarchies and extract important features from the input images. Multiple convolutional blocks allow the network to capture different levels of abstraction.
+
+2. **Normalization Layers:** The inclusion of batch normalization, group normalization, or layer normalization after each convolutional layer helps in improving the convergence speed and generalization of the model. It reduces internal covariate shift and provides stable gradients during training.
+
+3. **Dropout Layers:** The dropout layers randomly drop a certain percentage of the neuron activations, which helps in preventing overfitting by reducing co-adaptation of neurons. It improves the model's ability to generalize to unseen data.
+
+4. **Pooling Layers:** The max pooling layer downsamples the spatial dimensions, reducing the computational complexity and providing translation invariance. It also helps in extracting the most salient features.
+
+5. **Global Average Pooling:** The global average pooling layer reduces the spatial dimensions to a fixed size, making the model invariant to input image size. It also aggregates the feature maps across spatial dimensions, providing a compact representation for classification.
+
+By combining these architectural elements, the model can effectively learn and represent complex patterns in the input data, leading to improved performance on the given task.
