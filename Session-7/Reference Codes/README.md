@@ -140,3 +140,17 @@ This repository tracks the evolution of a deep learning model for MNIST problem.
 **Analysis:**
 - The model is under-fitting now. This is fine, as we know we have made our train data harder.
 - The test accuracy is also up, which means our test data had a few images which had transformation differences w.r.t. the train dataset
+
+## CODE 10: Playing Naively with Learning Rates
+
+**Target:**
+- Add LR Scheduler
+
+**Results:**
+- Parameters: 13.8k
+- Best Train Accuracy: 99.21
+- Best Test Accuracy: 99.45 (9th Epoch), 99.48 (20th Epoch)
+
+**Analysis:**
+- Finding a good LR schedule is hard. We have tried to make it effective by reducing LR by 10th after the 6th epoch.
+- It did help in getting to 99.4 or faster, but the final accuracy is not more than 99.5. Possibly a good scheduler can do wonders here!
