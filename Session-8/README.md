@@ -35,7 +35,7 @@ Based on the experimental results, it is observed that Batch Normalization achie
 ## Misclassified Images
 
 ### 1. Network with Group Normalization
-![Misclassified Images - Group Normalization](./Images/gn_missclassified.png)
+![Misclassified Images - Group Normalization](./Images/gn_misclassified.png)
 
 ### 2. Network with Layer Normalization
 ![Misclassified Images - Layer Normalization](./Images/ln_misclassified.png)
