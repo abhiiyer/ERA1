@@ -83,6 +83,17 @@ The following table presents the number of parameters at each layer, including b
 | Conv2d_8     | (10, 1, 1)   | 160          |
 | Dropout_7    | (10, 1, 1)   | 0            |
 
+## Calculation of Parameters at Each Layer
+
+The number of parameters at each layer can be calculated using the following formulas:
+
+- Convolutional layer: `(number of input channels) * (number of output channels) * (kernel size) * (kernel size) + (number of output channels)`
+- Batch Normalization layer: `2 * (number of output channels)`
+- Group Normalization layer: `2 * (number of output channels)`
+- Layer Normalization layer: `2 * (number of output channels)`
+- Dropout layer: `0` (no parameters)
+
+
 ## How Does This Model Architecture Help?
 
 The chosen model architecture helps in achieving good performance on the task at hand (not specified in the provided code) due to the following reasons:
