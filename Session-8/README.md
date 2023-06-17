@@ -9,10 +9,6 @@ This repository presents a comprehensive study of the impact of various normaliz
 - Misclassified Image Plotting: An insightful function is implemented to visualize misclassified images and gain a deeper understanding of the model's performance.
 - Training and Test Visualization: Plots are generated to track the training and test loss, as well as accuracy, throughout the training process.
 
-## Findings
-
-After training and evaluating the three models with different normalization techniques, the following findings were observed:
-
 ### Normalization Techniques in Convolutional Neural Networks
 
 After training and evaluating the three models with different normalization techniques, the following findings were observed:
@@ -46,10 +42,14 @@ The image above illustrates the dimensions along which weights are normalized fo
 
 Based on the experimental results, it is observed that Batch Normalization achieves higher test accuracies compared to Group Normalization and Layer Normalization.
 
+## Findings
+
+After training and evaluating the three models with different normalization techniques, the following findings were observed:
+
+
 ## Accuracy & Loss Plots for Training and Test
 
-![Loss Graph](./Images/LossImage.png)  
-![Accuracy Graph](./Images/AccuracyImage.png)
+![Loss Accuracy_Graph](./Images/Loss_AccuracyImage_CIFAR10.png)  
 
 ## Misclassified Images
 
