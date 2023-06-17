@@ -1,3 +1,27 @@
+# TSAI - EVA8 Session 5 Assignment
+
+## Problem Statement
+
+1. Change the dataset to CIFAR-10
+2. Make this network:
+   1. C1 C2 c3 P1 C3 C4 C5 c6 P2 C7 C8 C9 GAP C10
+   2. Keep the parameter count less than 50000
+   3. Try and add one layer to another
+   4. Max Epochs is 20
+3. You are making 3 versions of the above code (in each case achieve above 70% accuracy):
+    1. Network with Group Normalization  
+    2. Network with Layer Normalization  
+    3. Network with Batch Normalization
+4. Share these details
+   1. Training accuracy for 3 models
+   2. Test accuracy for 3 models
+   3. Find 10 misclassified images for the BN model, and show them as a 5x2 image matrix in 3 separately annotated images. 
+5. write an explanatory README file that explains:
+   1. what is your code all about
+   2. your findings for normalization techniques
+   3. add all your graphs
+   4. your collection-of-misclassified-images
+       
 # Solution
 
 ## Code Overview
