@@ -1,5 +1,3 @@
-# TSAI - EVA8 Session 5 Assignment
-
 ## Problem Statement
 
 1. Change the dataset to CIFAR-10
