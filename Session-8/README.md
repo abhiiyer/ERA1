@@ -27,9 +27,7 @@ The image above illustrates the dimensions along which weights are normalized fo
 
 Based on the experimental results, it is observed that Batch Normalization achieves higher test accuracies compared to Group Normalization and Layer Normalization.
 
-## Experiment & Findings
-
-# Normalization Techniques in Convolutional Neural Networks
+## Findings
 
 After training and evaluating the three models with different normalization techniques, the following findings were observed:
 
@@ -47,6 +45,7 @@ Although Group Normalization did not perform as well as Batch Normalization, it 
 Layer Normalization had the lowest test accuracy among the three models. This technique normalizes the features across the spatial dimensions of each layer, but it does not consider the batch dimension. Layer Normalization may not be as effective in CNNs compared to other normalization techniques, especially when dealing with complex image datasets.
 
 - Layer Normalization model - Max Training Accuracy: 72.98%, Max Test Accuracy: 71.60%
+
 
 Overall, Batch Normalization remains the most widely used and effective normalization technique for CNNs. It provides improved generalization, faster convergence, and better stability during training. However, the performance of normalization techniques can vary depending on the dataset and model architecture, so it is recommended to experiment and choose the appropriate technique based on the specific requirements and constraints of the task.
 
