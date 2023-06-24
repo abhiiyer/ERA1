@@ -1,8 +1,24 @@
 # Assignment: CIFAR10 Classification with CNN and Albumentations
 
+## Problem Statement
+
+1. Change the architecture to C1C2C3C40 (No MaxPooling, but 3 3x3 layers with stride of 2 instead) (If you can figure out how to use Dilated kernels here instead of MP or strided convolution, then 200pts extra!)
+2. Total RF must be more than 44
+3. one of the layers must use Depthwise Separable Convolution
+4. one of the layers must use Dilated Convolution
+5. use GAP (compulsory)  - add FC after GAP to target #of classes (optional)
+6. use albumentation library and apply:  
+        1. horizontal flip
+        2. shiftScaleRotate
+        3. coarseDropout (max_holes = 1, max_height=16px, max_width=1, min_holes = 1, min_height=16px, min_width=16px, fill_value=(mean of your dataset), mask_fill_value = None)
+7. achieve 85% accuracy, as many epochs as you want. Total Params to be less than 200k.
+8. make sure you're following code-modularity (else 0 for full assignment)
+9. upload to Github
+10. Attempt S9-Assignment Solution.  
+
 ## Introduction
 
-The goal of this assignment is to design a Convolutional Neural Network (CNN) using PyTorch and the Albumentations library to achieve an accuracy of 85% on the CIFAR10 dataset. The code for this assignment is provided in a Jupyter Notebook, which can be found [here](./EVA8_S6_CIFAR10.ipynb).
+The goal of this assignment is to design a Convolutional Neural Network (CNN) using PyTorch and the Albumentations library to achieve an accuracy of 85% on the CIFAR10 dataset. The code for this assignment is provided in a Jupyter Notebook, which can be found [here](./ERA1_S9_CIFAR10.ipynb).
 
 The CIFAR10 dataset consists of 60,000 32x32 color training images and 10,000 test images, labeled into 10 classes. The dataset is divided into 50,000 training images and 10,000 validation images.
 
