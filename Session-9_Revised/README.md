@@ -67,16 +67,15 @@ Here is a preview of augmented images:
 
 ## Results
 
-The model was trained for 25 epochs and achieved an accuracy of 84.64% on the test set. The total number of parameters in the model was under 200k. The training logs, as well as the output of torchsummary, are included in the provided notebook.
+The model was trained for 300 epochs and achieved an maximum test accuracy of 85.90% on the test set. The total number of parameters in the model was under 100k. The training logs, as well as the output of torchsummary, are included in the provided notebook.
 
-Training accuracy: 82.84%
-Test accuracy: 84.64%
+![test_accuracy](./Images/max_test_accuracy.png)
 
 ## Class-wise Accuracy
 
 The class-wise accuracy of the model on the test set is visualized in the following image:
 
-![classwise_accuracy](./Images/classwise_accuracy.png)
+![classwise_accuracy](./Images/class_accuracy.png)
 
 ## Misclassified Images
 
