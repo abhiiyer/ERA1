@@ -24,8 +24,33 @@ The CIFAR10 dataset consists of 60,000 32x32 color training images and 10,000 te
 
 ## Model Architecture
 
-The model architecture used for this assignment is based on the C1C2C3C40 architecture with several modifications. Instead of max pooling, the network consists of 3 convolutional layers with 3x3 filters and a stride of 2. The final layer utilizes global average pooling (GAP). The architecture leverages mobileNetV2, which combines expand, depthwise, and pointwise convolution with residual connections. One layer uses depthwise separable convolution, while another layer uses dilated convolution.
+Model Architecture Explanation
+The model consists of several convolutional layers with different configurations, followed by pooling and fully connected layers.
 
+Convolutional Block 1
+Convolutional Layer 1: Applies 32 filters of size 3x3 to the input image, with ReLU activation and batch normalization. The output feature map size remains the same.
+Convolutional Layer 2: Applies 64 filters of size 3x3 to the previous feature map, with ReLU activation and batch normalization. The output feature map size remains the same.
+Transition Layer 1
+Convolutional Layer: Applies 32 filters of size 1x1 to reduce the number of channels in the feature map.
+Convolutional Block 2
+Depthwise Separable Convolution: Applies depthwise separable convolution with 32 groups and 3x3 kernel size, followed by 1x1 pointwise convolution. This block is repeated three times.
+Transition Layer 2
+Convolutional Layer: Applies 16 filters of size 3x3 with a dilation rate of 2 to the previous feature map, reducing its size.
+Convolutional Block 3
+Depthwise Separable Convolution: Applies depthwise separable convolution with 16 groups and 3x3 kernel size, followed by 1x1 pointwise convolution. This block is repeated three times.
+Transition Layer 3
+Convolutional Layer: Applies 64 filters of size 3x3 with a stride of 2 to reduce the size of the feature map.
+Convolutional Layer: Applies 16 filters of size 1x1 to reduce the number of channels in the feature map.
+Convolutional Block 4
+Convolutional Layer 1: Applies 32 filters of size 3x3 to the previous feature map.
+Convolutional Layer 2: Applies 64 filters of size 3x3 to the previous feature map.
+Average Pooling
+Applies average pooling with a kernel size of 3x3 to reduce the spatial dimensions of the feature map.
+Convolutional Layer 5
+Convolutional Layer: Applies 10 filters of size 1x1 to produce the final feature map.
+Output Layer
+Reshapes the feature map into a 10-dimensional vector.
+Applies the log softmax activation function to produce the output probabilities.
 ## Data Augmentation
 
 Data augmentation is an essential technique to improve the model's performance and generalization. In this assignment, data augmentation is performed using the Albumentations library. The following techniques are applied in the training data loader:
