@@ -77,8 +77,6 @@ The class-wise accuracy of the model on the test set is visualized in the follow
 
 ![classwise_accuracy](./Images/class_accuracy.png)
 
-## Misclassified Images
+## Loss & Accuracy Plots (Training & Test)
 
-Here are a few samples of misclassified images:
-
-![misclassified](./Images/misclassified_images.png)
+![loss_accuracy](./Images/loss_accuracy.png)
