@@ -22,35 +22,87 @@ The goal of this assignment is to design a Convolutional Neural Network (CNN) us
 
 The CIFAR10 dataset consists of 60,000 32x32 color training images and 10,000 test images, labeled into 10 classes. The dataset is divided into 50,000 training images and 10,000 validation images.
 
-## Model Architecture
+# Model Architecture
 
-Model Architecture Explanation
 The model consists of several convolutional layers with different configurations, followed by pooling and fully connected layers.
 
-Convolutional Block 1
-Convolutional Layer 1: Applies 32 filters of size 3x3 to the input image, with ReLU activation and batch normalization. The output feature map size remains the same.
-Convolutional Layer 2: Applies 64 filters of size 3x3 to the previous feature map, with ReLU activation and batch normalization. The output feature map size remains the same.
-Transition Layer 1
-Convolutional Layer: Applies 32 filters of size 1x1 to reduce the number of channels in the feature map.
-Convolutional Block 2
-Depthwise Separable Convolution: Applies depthwise separable convolution with 32 groups and 3x3 kernel size, followed by 1x1 pointwise convolution. This block is repeated three times.
-Transition Layer 2
-Convolutional Layer: Applies 16 filters of size 3x3 with a dilation rate of 2 to the previous feature map, reducing its size.
-Convolutional Block 3
-Depthwise Separable Convolution: Applies depthwise separable convolution with 16 groups and 3x3 kernel size, followed by 1x1 pointwise convolution. This block is repeated three times.
-Transition Layer 3
-Convolutional Layer: Applies 64 filters of size 3x3 with a stride of 2 to reduce the size of the feature map.
-Convolutional Layer: Applies 16 filters of size 1x1 to reduce the number of channels in the feature map.
-Convolutional Block 4
-Convolutional Layer 1: Applies 32 filters of size 3x3 to the previous feature map.
-Convolutional Layer 2: Applies 64 filters of size 3x3 to the previous feature map.
-Average Pooling
-Applies average pooling with a kernel size of 3x3 to reduce the spatial dimensions of the feature map.
-Convolutional Layer 5
-Convolutional Layer: Applies 10 filters of size 1x1 to produce the final feature map.
-Output Layer
-Reshapes the feature map into a 10-dimensional vector.
-Applies the log softmax activation function to produce the output probabilities.
+## Convolutional Block 1
+
+This block consists of two convolutional layers that process the input image.
+
+- Convolutional Layer 1: Applies 32 filters of size 3x3 to the input image. This helps to extract various features from the image.
+- Convolutional Layer 2: Applies 64 filters of size 3x3 to the previous feature map. This layer further enhances the learned features.
+
+## Transition Layer 1
+
+This layer reduces the number of channels in the feature map.
+
+- Convolutional Layer: Applies 32 filters of size 1x1 to the previous feature map. It helps in reducing the computational complexity and prepares for the next block.
+
+## Convolutional Block 2
+
+This block consists of multiple depthwise separable convolutions, which are efficient alternatives to standard convolutions.
+
+- Depthwise Separable Convolution: Applies depthwise separable convolution with 32 groups and 3x3 kernel size, followed by 1x1 pointwise convolution. This block is repeated three times. It helps in capturing spatial correlations between channels efficiently.
+
+## Transition Layer 2
+
+This layer reduces the size of the feature map using a larger receptive field.
+
+- Convolutional Layer: Applies 16 filters of size 3x3 with a dilation rate of 2 to the previous feature map. It helps in capturing larger context and spatial information.
+
+## Convolutional Block 3
+
+This block further processes the feature map using depthwise separable convolutions.
+
+- Depthwise Separable Convolution: Applies depthwise separable convolution with 16 groups and 3x3 kernel size, followed by 1x1 pointwise convolution. This block is repeated three times. It helps in extracting more abstract and discriminative features.
+
+## Transition Layer 3
+
+This layer reduces the size of the feature map while preserving important features.
+
+- Convolutional Layer: Applies 64 filters of size 3x3 with a stride of 2 to the previous feature map. It reduces the spatial dimensions of the feature map.
+- Convolutional Layer: Applies 16 filters of size 1x1 to the previous feature map. It further reduces the number of channels.
+
+## Convolutional Block 4
+
+This block performs additional convolutions to enhance the learned features.
+
+- Convolutional Layer 1: Applies 32 filters of size 3x3 to the previous feature map.
+- Convolutional Layer 2: Applies 64 filters of size 3x3 to the previous feature map.
+
+## Average Pooling
+
+This layer reduces the spatial dimensions of the feature map by taking the average value within each region.
+
+- Applies average pooling with a kernel size of 3x3.
+
+## Convolutional Layer 5
+
+This layer applies 10 filters of size 1x1 to produce the final feature map.
+
+- Convolutional Layer: Applies 10 filters of size 1x1 to the previous feature map. It helps in capturing the class-specific information.
+
+## Output Layer
+
+The output layer processes the final feature map to produce the output probabilities.
+
+- Reshapes the feature map into a 10-dimensional vector.
+- Applies the log softmax activation function to produce the output probabilities.
+
+# Pros and Cons
+
+Pros:
+- The model utilizes depthwise separable convolutions, which reduce the number of parameters and computational complexity, making the model more efficient.
+- The model incorporates various types of convolutions, batch normalization, and dropout, which can help in better feature extraction and regularization.
+- The use of ReLU activation functions introduces non-linearity, enabling the model to learn complex patterns and features.
+- The model includes average pooling, which can help in spatial dimension reduction and translation invariance.
+
+Cons:
+- The model architecture may be complex for beginners to understand due to the presence of different types of convolutions and multiple blocks.
+- The model may require longer training time due to the presence of many convolutional layers.
+- The effectiveness of the model heavily relies on appropriate hyperparameter tuning and dataset characteristics.
+
 ## Data Augmentation
 
 Data augmentation is an essential technique to improve the model's performance and generalization. In this assignment, data augmentation is performed using the Albumentations library. The following techniques are applied in the training data loader:
