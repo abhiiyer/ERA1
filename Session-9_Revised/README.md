@@ -38,6 +38,33 @@ Here is a preview of augmented images:
 
 ![augmentation](./Images/dataloader_preview.png)
 
+## Model Parameter & Receptive Field
+
+| Layer                  | Output Size   | Receptive Field | Parameters                |
+|------------------------|---------------|----------------|---------------------------|
+| Conv1                  | 32x32x32      | 3x3            | (3x3x3)x32 = 864          |
+| Conv2                  | 32x32x64      | 5x5            | (3x3x32)x64 = 18432       |
+| Transition1            | 32x32x32      | 5x5            | (1x1x64)x32 = 2048        |
+| Conv2 (Depthwise)      | 32x32x32      | 13x13          | (3x3x32)x32 = 9216        |
+| Conv2 (Pointwise)      | 32x32x32      | 13x13          | (1x1x32)x32 = 1024        |
+| Conv2 (Depthwise)      | 32x32x32      | 21x21          | (3x3x32)x32 = 9216        |
+| Conv2 (Pointwise)      | 32x32x32      | 21x21          | (1x1x32)x32 = 1024        |
+| Conv2 (Depthwise)      | 32x32x32      | 29x29          | (3x3x32)x32 = 9216        |
+| Conv2 (Pointwise)      | 32x32x32      | 29x29          | (1x1x32)x32 = 1024        |
+| Transition2            | 32x32x16      | 37x37          | (3x3x32)x16 = 4608        |
+| Conv3 (Depthwise)      | 32x32x16      | 53x53          | (3x3x16)x16 = 2304        |
+| Conv3 (Pointwise)      | 32x32x32      | 53x53          | (1x1x16)x32 = 512         |
+| Conv3 (Depthwise)      | 32x32x32      | 85x85          | (3x3x32)x32 = 9216        |
+| Conv3 (Pointwise)      | 32x32x64      | 85x85          | (1x1x32)x64 = 2048        |
+| Conv3 (Depthwise)      | 32x32x64      | 117x117        | (3x3x64)x64 = 36864       |
+| Conv3 (Pointwise)      | 32x32x64      | 117x117        | (1x1x64)x64 = 4096        |
+| Transition3            | 16x16x16      | 149x149        | (3x3x64)x16 = 36864       |
+| Conv4                  | 14x14x64      | 181x181        | (3x3x16)x32 = 4608        |
+| Conv4                  | 12x12x64      | 213x213        | (3x3x32)x64 = 18432       |
+| AvgPool2D              | 1x1x64        | -              | -                         |
+| Conv5                  | 1x1x10        | 213x213        | (1x1x64)x10 = 640         |
+| Total Parameters       | -             | -              | 99,968                    |
+
 ## Results
 
 The model was trained for 25 epochs and achieved an accuracy of 84.64% on the test set. The total number of parameters in the model was under 200k. The training logs, as well as the output of torchsummary, are included in the provided notebook.
