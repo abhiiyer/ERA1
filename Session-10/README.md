@@ -23,28 +23,26 @@ The receptive field of a neural network refers to the region of the input image 
 
 The ResNet model used in this project consists of multiple residual blocks. Each residual block contains several convolutional layers, batch normalization layers, and ReLU activation functions. The number of filters in each convolutional layer and the size of the receptive field increase as we go deeper into the network. The detailed model architecture and the receptive field size for each layer are as follows:
 
-| Layer                  | Output Size    | Receptive Field | Parameters |
-|------------------------|----------------|-----------------|------------|
-| Input                  | 32x32x3        | -               | -          |
-| Convolution 1          | 32x32x64       | 3x3             | 1,792      |
-| Residual Block 1       | 32x32x64       | 3x3             | -          |
-|                        |                |                 |            |
-| Convolution 2          | 32x32x64       | 3x3             | 36,928     |
-| Convolution 3          | 32x32x64       | 3x3             | 36,928     |
-| Residual Block 2       | 16x16x128      | 5x5             | -          |
-|                        |                |                 |            |
-| Convolution 4          | 16x16x128      | 3x3             | 73,856     |
-| Convolution 5          | 16x16x128      | 3x3             | 147,584    |
-| Residual Block 3       | 8x8x256        | 7x7             | -          |
-|                        |                |                 |            |
-| Convolution 6          | 8x8x256        | 3x3             | 295,168    |
-| Convolution 7          | 8x8x256        | 3x3             | 590,080    |
-| Residual Block 4       | 4x4x512        | 9x9             | -          |
-|                        |                |                 |            |
-| Convolution 8          | 4x4x512        | 3x3             | 1,180,160  |
-| Convolution 9          | 4x4x512        | 3x3             | 2,359,808  |
-| Average Pooling        | 1x1x512        | 32x32           | -          |
-| Fully Connected (Output)| 10             | -               | 5,130      |
+| Layer                  | Output Size    | Receptive Field | Parameters  |
+|------------------------|----------------|-----------------|-------------|
+| Input                  | 32x32x3        | -               | -           |
+| Convolution 1          | 32x32x64       | 3x3             | 1,792       |
+| Residual Block 1       | 32x32x64       | 3x3             | -           |
+| Convolution 2          | 32x32x64       | 3x3             | 36,928      |
+| Convolution 3          | 32x32x64       | 3x3             | 36,928      |
+| Residual Block 2       | 16x16x128      | 5x5             | -           |
+| Convolution 4          | 16x16x128      | 3x3             | 147,584     |
+| Convolution 5          | 16x16x128      | 3x3             | 295,040     |
+| Residual Block 3       | 8x8x256        | 9x9             | -           |
+| Convolution 6          | 8x8x256        | 3x3             | 590,080     |
+| Convolution 7          | 8x8x256        | 3x3             | 1,180,160   |
+| Residual Block 4       | 4x4x512        | 17x17           | -           |
+| Convolution 8          | 4x4x512        | 3x3             | 2,359,808   |
+| Convolution 9          | 4x4x512        | 3x3             | 2,359,808   |
+| Average Pooling        | 1x1x512        | 32x32           | -           |
+| Fully Connected (Output)| 10             | -               | 5,130       |
+
+The total number of parameters in the model is 6,574,090.
 
 The model parameters are learned during the training process and are optimized to minimize the loss function.
 
