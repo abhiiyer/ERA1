@@ -58,7 +58,7 @@ The model is trained on the CIFAR-10 dataset, which consists of 50,000 training 
 
 The model achieved the following results on the CIFAR-10 test dataset:
 
-- Maximum Test Accuracy: [INSERT MAXIMUM TEST ACCURACY] at Epoch: [INSERT EPOCH NUMBER]
+- Maximum Test Accuracy: [92.35%] at Epoch: [22]
 
 ## Loss & Accuracy Plots
 
