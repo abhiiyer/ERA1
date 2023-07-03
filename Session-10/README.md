@@ -21,7 +21,29 @@ The model's parameters were optimized using the Adam optimizer with a learning r
 
 The receptive field of a neural network refers to the region of the input image that influences the output of a particular neuron. In this ResNet model, the receptive field increases gradually with the depth of the network due to the stacking of convolutional layers and the use of residual connections.
 
+The ResNet model used in this project consists of multiple residual blocks. Each residual block contains several convolutional layers, batch normalization layers, and ReLU activation functions. The number of filters in each convolutional layer and the size of the receptive field increase as we go deeper into the network. The detailed model architecture and the receptive field size for each layer are as follows:
+
+| Layer            | Number of Filters | Receptive Field Size |
+|------------------|------------------|---------------------|
+| Convolution 1    | 64               | 3x3                 |
+| Residual Block 1 | 64               | 3x3                 |
+| Residual Block 2 | 128              | 5x5                 |
+| Residual Block 3 | 256              | 7x7                 |
+| Residual Block 4 | 512              | 9x9                 |
+| Average Pooling  | -                | 32x32               |
+| Fully Connected  | -                | -                   |
+
+The model parameters are learned during the training process and are optimized to minimize the loss function.
+
 ## Results
+
+The model is trained on the CIFAR-10 dataset, which consists of 50,000 training images and 10,000 test images belonging to 10 different classes. After training the model for a certain number of epochs, the following results are obtained:
+
+- Training Loss: The average loss on the training set.
+- Training Accuracy: The accuracy on the training set.
+- Test Loss: The average loss on the test set.
+- Test Accuracy: The accuracy on the test set.
+- Class-wise Accuracy: The accuracy of the model for each class in the test set.
 
 The model achieved the following results on the CIFAR-10 test dataset:
 
@@ -31,6 +53,6 @@ The model achieved the following results on the CIFAR-10 test dataset:
 
 The following plots show the training and test loss, as well as the training and test accuracy, across the epochs:
 
-![Loss and Accuracy Plots](loss_accuracy_plots.png)
+![loss_accuracy](./Images/loss_accuracy.png)
 
 
