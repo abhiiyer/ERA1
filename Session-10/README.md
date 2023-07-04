@@ -24,6 +24,16 @@ Data augmentation is a technique used to increase the diversity of the training 
 
 Additionally, a custom `Cutout` transform is applied, which randomly cuts out a square region from the images. This technique encourages the model to focus on smaller local features and improves its robustness to occlusions.
 
+In the code, a custom `Cutout` transform is applied to the training images. Here's how it works:
+
+1. For each image, a random position `(x, y)` within the image is selected as the top-left corner of the cutout patch.
+2. The length of the side of the cutout patch is also chosen randomly.
+3. The pixels within the selected rectangular region `(x, y, x + length, y + length)` are set to zero, effectively "cutting out" that portion of the image.
+4. The resulting image with the cutout patch is then used for training.
+   
+By randomly removing these patches from the images, the model is forced to rely on other features in the remaining parts of the image, thereby making it more robust to occlusions and improving its generalization capabilities.
+
+
 ## Learning Rate Finder
 
 The learning rate (LR) finder is a technique used to determine an optimal learning rate for training a neural network. It helps identify the learning rate range where the model achieves the fastest convergence and the lowest loss. Here are some pros and cons of using the LR Finder:
