@@ -2,7 +2,17 @@
 
 ## Model
 
-The model used for CIFAR-10 classification is ResNet (Residual Neural Network). ResNet is a deep convolutional neural network architecture that is known for its ability to train very deep networks by using skip connections or residual connections. The ResNet model used in this project has a total of 18 convolutional layers, including residual blocks with two convolutional layers each. It also includes batch normalization and ReLU activation functions after each convolutional layer.
+The model used for CIFAR-10 classification is ResNet (Residual Neural Network). ResNet is a deep convolutional neural network architecture that is known for its ability to train very deep networks by using skip connections or residual connections. The ResNet model used in this project has a total of 18 convolutional layers, including residual blocks with two convolutional layers each. It also includes batch normalization and ReLU activation functions after each convolutional layer. **The model is defined in the `model.py` file.**
+
+## Dependencies
+
+The code requires the following dependencies:
+
+- PyTorch: The deep learning library used for building and training the model.
+- Torchvision: A PyTorch package that provides datasets and transforms for computer vision tasks.
+- Matplotlib: A plotting library used for visualizing loss and accuracy curves.
+- NumPy: A library for numerical computing.
+- PIL: The Python Imaging Library used for image processing.
 
 ## Data Augmentation
 
@@ -11,6 +21,25 @@ Data augmentation is a technique used to increase the diversity of the training 
 - Random Crop: Randomly crops the image to a smaller size while preserving the aspect ratio.
 - Random Horizontal Flip: Randomly flips the image horizontally.
 - Normalization: Normalizes the image by subtracting the mean and dividing by the standard deviation of the dataset.
+
+Additionally, a custom `Cutout` transform is applied, which randomly cuts out a square region from the images. This technique encourages the model to focus on smaller local features and improves its robustness to occlusions.
+
+## Learning Rate Finder
+
+The learning rate (LR) finder is a technique used to determine an optimal learning rate for training a neural network. It helps identify the learning rate range where the model achieves the fastest convergence and the lowest loss. Here are some pros and cons of using the LR Finder:
+
+Pros:
+- Allows for efficient exploration of a wide range of learning rates.
+- Helps find an initial learning rate that can speed up the training process.
+- Provides insights into the behavior of the model by visualizing the loss versus learning rate curve.
+
+Cons:
+- The LR Finder may not always converge to the global minimum, but it can still provide a good starting point for training.
+- It requires an additional pass over the training data, which increases the training time.
+- The optimal learning rate found by the LR Finder may vary depending on the model architecture, dataset, and optimization algorithm.
+
+In this code, the LR Finder is used to determine the learning rate range for training the ResNet model. The `LRFinder` class from the `torch_lr_finder` package is utilized. The LR Finder iterates through the training data while gradually increasing the learning rate and records the corresponding losses. The learning rate range is then visualized using a plot.
+
 
 ## Model Parameters & Receptive Field
 
