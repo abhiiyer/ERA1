@@ -38,6 +38,28 @@ By randomly removing these patches from the images, the model is forced to rely 
 
 The learning rate (LR) finder is a technique used to determine an optimal learning rate for training a neural network. It helps identify the learning rate range where the model achieves the fastest convergence and the lowest loss. Here are some pros and cons of using the LR Finder:
 
+## OneCycleLR Policy
+
+The purpose of the OneCycleLR policy is to dynamically adjust the learning rate during training to improve model performance. It is designed to achieve faster convergence and better generalization by using a cyclical learning rate schedule.
+
+### Phases of OneCycleLR Policy
+
+The OneCycleLR policy consists of two phases: the increasing phase and the decreasing phase.
+
+1. **Increasing Phase:** During this phase, the learning rate is gradually increased from `min_lr` to `max_lr`. This helps the model quickly converge to a good solution by using a higher learning rate.
+
+2. **Decreasing Phase:** In this phase, the learning rate is gradually decreased back to `min_lr`, allowing the model to fine-tune and stabilize the learned weights.
+
+By incorporating these two phases, the OneCycleLR policy helps the model to effectively explore the learning rate landscape and find an optimal rate for training.
+
+### Dynamic Learning Rate Adjustment
+
+Using the OneCycleLR policy, you can set the `max_lr` and `min_lr` values to define the upper and lower bounds of the learning rate range. However, the actual learning rate used during training will be dynamically adjusted by the scheduler based on the current epoch and step within the epoch.
+
+This means that even though you manually set the `max_lr` and `min_lr` values, the OneCycleLR policy will still adjust the learning rate within that range according to its cyclical pattern. This allows the model to explore different learning rates and find a better balance between convergence speed and generalization performance.
+
+The OneCycleLR policy is a powerful technique to enhance the training process, especially when combined with other regularization methods, and it can lead to improved performance and faster training convergence.
+
 Pros:
 - Allows for efficient exploration of a wide range of learning rates.
 - Helps find an initial learning rate that can speed up the training process.
