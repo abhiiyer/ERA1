@@ -53,6 +53,12 @@ The GradCAM visualization technique is used to visualize which regions of an ima
 
 If you want to experiment with different hyperparameters or model architectures, you can modify the main.ipynb notebook. Additionally, if you wish to change the data augmentation or transformation strategies, you can update the transforms in the data_loader.py file.
 
+## Loss & Accuracy Plots
+
+The following plots show the training and test loss, as well as the training and test accuracy, across the epochs:
+
+![loss_accuracy](./Images/loss_accuracy.png)
+
 # Explanation of GradCAM
 
 GradCAM (Gradient-weighted Class Activation Mapping) is a visualization technique that highlights the regions of an image that are important for the model's prediction. It achieves this by generating a heatmap that shows which pixels in the image contribute most to the model's decision.
@@ -112,3 +118,18 @@ The code in the main.ipynb notebook follows the following flow:
 - It may not be suitable for models with complex decision-making processes, as the heatmaps may not always accurately reflect the model's reasoning.
 
 - GradCAM heatmaps may not be interpretable for highly ambiguous images, where multiple regions contribute equally to the model's decision.
+
+  Here is a preview of augmented images:
+
+## Mis-Classified GradCAM Images
+
+Here are a few samples of misclassified images:
+
+![misclassified](./Images/misclassified_images.png)
+
+## Results
+
+The model was trained for 20 epochs and achieved an accuracy of 88.59% on the test set. The total number of parameters in the model was ~6M. The training logs, as well as the output of torchsummary, are included in the provided notebook.
+
+Training accuracy: 92.47%%
+Test accuracy: 88.59%
