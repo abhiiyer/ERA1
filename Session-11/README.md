@@ -31,7 +31,7 @@ You can install the necessary packages using the following command:
 
 ```bash
 pip install torch torchvision matplotlib numpy opencv-python
-
+```
 
 # Setup
 
