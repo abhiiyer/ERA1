@@ -15,6 +15,10 @@ This repository contains code for training and evaluating a ResNet-18 model on t
 9. [Model Architecture](#model-architecture)
 10. [Code Flow](#code-flow)
 11. [Pros and Cons of GradCAM](#pros-and-cons-of-gradcam)
+12. [Mis-Classified GradCAM Images](#mis-classified-gradcam)
+13. [Results](#results)
+14. [GradCAM Layer-wise Images (Correctly Classified + Mis-classified)](#gradcam_classified)
+
 
 ## Prerequisites
 
@@ -129,7 +133,13 @@ Here are a few samples of misclassified images:
 
 ## Results
 
-The model was trained for 20 epochs and achieved an accuracy of 88.59% on the test set. The total number of parameters in the model was ~6M. The training logs, as well as the output of torchsummary, are included in the provided notebook.
+The model was trained for 20 epochs and achieved an accuracy of 91% on the test set. The total number of parameters in the model was ~11M. The training logs, as well as the output of torchsummary, are included in the provided notebook.
 
-Training accuracy: 92.47%%
-Test accuracy: 88.59%
+Training accuracy: 89.92%
+Test accuracy: 91.00%
+
+## GradCAM Layer-wise Images (Correctly Classified + Mis-classified)
+
+Here are a few samples of misclassified images:
+
+![layer_wise_GradCAM](./Images/layer_wise_GradCAM.png)
