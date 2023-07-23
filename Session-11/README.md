@@ -123,8 +123,6 @@ The code in the main.ipynb notebook follows the following flow:
 
 - GradCAM heatmaps may not be interpretable for highly ambiguous images, where multiple regions contribute equally to the model's decision.
 
-  Here is a preview of augmented images:
-
 ## Mis-Classified GradCAM Images
 
 Here are a few samples of misclassified images:
