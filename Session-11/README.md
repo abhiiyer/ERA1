@@ -142,4 +142,4 @@ Test accuracy: 91.00%
 
 Here are a few samples of misclassified images:
 
-![layer_wise_GradCAM](./Images/layer_wise_GradCAM.png)
+![layer_wise](./Images/layer_wise_GradCAM.png)
