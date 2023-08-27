@@ -1,4 +1,4 @@
-[![Hugging Face Model](https://img.shields.io/badge/Hugging%20Face-Model%20Link-blue)](https://huggingface.co/spaces/skatti/YOLO-PASCO)
+[![Hugging Face Model](https://img.shields.io/badge/Hugging%20Face-Model%20Link-blue)](https://huggingface.co/spaces/abiyer88/PASCAL_YOLO)
 [![Kaggle Notebook](https://img.shields.io/badge/Kaggle-Notebook%20Training%20Link-blue)](https://www.kaggle.com/code/sushmithakatti/yolov3?scriptVersionId=141025965)
 [![Modular Code](https://img.shields.io/badge/Modular-Code%20Link-blue)](https://github.com/abhiiyer/ERA1/tree/main/Session-13/modular)
 
