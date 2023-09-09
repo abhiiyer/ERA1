@@ -42,9 +42,3 @@ The objective of this assignment was to build a model for translating English te
 ## Training Results 📊
 - **Final Loss:** The training loss reached `1.43`.
 
-### Training Plots
-
-
-
-### Evaluation Metrics
-
