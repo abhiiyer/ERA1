@@ -16,7 +16,7 @@ Movie Poster dataset contains approx. 40k movies posters and its genre. It is av
 The genre text was modified with different kinds of user prompts while training the model.
 
 ## App:
-The gradio app is available at https://huggingface.co/spaces/sanjanatule/clipmovie
+The gradio app is available at https://huggingface.co/spaces/abiyer88/ERA1_abhiiyer_clipmovie
 
 ## Future work:
 The movie plot, actors and producers/directors can be included as a part of the training the model.
