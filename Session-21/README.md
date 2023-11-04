@@ -7,15 +7,15 @@
   4. Context Length: 32
 
 ## Hugging Face Model Link:
-https://huggingface.co/sanjanatule/gpt-shakespeare/tree/main
+https://huggingface.co/spaces/abiyer88/ERA1_Session21_gpt-shakespeare/tree/main
 
 ```
-sanjanatule/gpt-shakespeare
+abhiiyer/ERA1_Session21_gpt-shakespeare
 ```
 
 ## Hugging Face Spaces Link:
 
-https://huggingface.co/spaces/sanjanatule/ShakespeareGPT
+https://huggingface.co/spaces/abiyer88/ERA1_Session21_ShakespeareGPT
 
 
 ## Generate Dialogue for a character using the trained model
