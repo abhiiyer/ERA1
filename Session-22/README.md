@@ -1,4 +1,4 @@
-# Training GPT from scratch using arxiv + book + cc.
+# Training GPT from scratch.
 
 ## Key Features:
   1. Parameter Count: 160M
@@ -9,7 +9,7 @@
 
 ## Hugging Face Spaces Link:
 
-https://huggingface.co/spaces/sanjanatule/GPTNext
+https://huggingface.co/spaces/abiyer88/NexrWordGPT
 
 
 ## Generate Dialogue for a character using the trained model - examples
